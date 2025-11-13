@@ -5,193 +5,47 @@ body {
   background-image: url("../images/bg.jpg");
   background-attachment: fixed;
   font-family: "Open Sans";
-  margin: 0;
+  background-position: center;
 }
 
-.topbar {
-  background: rgba(107, 107, 107, 0.9);
-  padding: 1em;
+.navblock {
+  background-color: rgba(186, 186, 186, 0.8);
+  padding: 10px;
+  margin: 0px;
   text-align: center;
-}
-
-.busName {
-  font-family: "Michroma";
-  text-transform: uppercase;
-  font-size: 76px;
-  text-decoration: none;
-  font-weight: normal;
-  color: black;
-  margin: 0;
-}
-
-span {
-  color: greenyellow;
-}
-
-.sublogo {
-  font-family: "Michroma";
-  text-transform: uppercase;
-  font-size: 30px;
-  text-decoration: none;
-  font-weight: normal;
-  color: black;
-  margin: 20px;
-}
-
-nav {
-  font-family: "Michroma";
-  text-transform: uppercase;
-}
-
-ul#navbar {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  width: 100%;
-  display: table;
-  text-align: center;
-}
-
-ul li {
-  display: inline-block;
-  float: none;
-  list-style-type: none;
-  margin: 12px;
-}
-
-ul li a:link, ul li a:visited {
-  color: black;
-  text-decoration: none;
-}
-
-ul li a:hover, ul li a:active {
-  color: greenyellow;
-  text-decoration: underline;
-}
-
-.currentPage {
-  font-weight: bold;
-}
-
-.hero {
-  margin-top: 200px;
-  margin-left: 900px;
-  margin-right: 900px;
-  margin-bottom: -200px;
-  padding-top: -300px;
-  padding-bottom: 400px;
-}
-
-.subhero {
-  background: rgba(16, 224, 16, 0.8);
-  padding: 100px;
-  text-align: center;
-  border-radius: 25px;
-}
-
-.serviceTitle {
-  font-family: "Open Sans";
-  text-transform: uppercase;
-  font-size: 60px;
-  text-decoration: none;
-  font-weight: normal;
-  color: black;
-  margin: auto;
   display: block;
 }
-
-.serviceButton {
-  font-family: "Open Sans";
-  text-transform: uppercase;
-  font-size: 20px;
-  text-decoration: none;
-  font-weight: normal;
-  color: black;
-  display: block;
-  margin: auto;
-  margin-top: 30px;
-  padding: 12px;
-}
-
-.mainbody {
-  background: rgb(107, 107, 107);
-}
-
-.gallery {
-  width: 50%;
-  height: 700px;
-  padding: 20px;
+.navblock ul {
   display: flex;
-  gap: 4vw;
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
-  anchor-name: --my-carousel;
-  margin: auto;
+  justify-content: space-between;
+  list-style-type: none;
 }
-
-.galleryimg {
-  width: 1200px;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  margin-left: 500px;
-  margin-right: 500px;
-}
-
-.column {
+.navblock ul li .burger {
+  margin: 20px;
+  margin-top: 30px;
+  border: 5px solid yellowgreen;
+  border-radius: 5px;
   padding: 10px;
 }
 
-.column h3 {
-  font-family: "Michroma";
+nav {
+  background-color: whitesmoke;
+  position: fixed;
+  top: 140px;
+  right: 40px;
+}
+nav ul {
+  list-style-type: none;
+  padding: 10px;
+  text-align: right;
   text-transform: uppercase;
-  text-align: center;
-  color: whitesmoke;
+  font-family: "Orbitron";
 }
-
-.column p {
-  font-family: "Open Sans";
-  color: whitesmoke;
+nav ul li a:link, nav ul li a:visited {
+  text-decoration: none;
+  color: black;
 }
-
-.closingmessage {
-  text-align: center;
-  text-transform: uppercase;
-  color: whitesmoke;
-  font-family: "Open Sans";
-  font-size: 40px;
-}
-
-.closingbutton {
-  display: block;
-  margin: auto;
-  background-color: yellowgreen;
-  border: none;
-  margin-bottom: 50px;
-  font-size: 30px;
-  padding-right: 50px;
-  padding-left: 50px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.footer {
-  background-color: #bababa;
-}
-
-.footerList {
-  display: table;
-  margin: auto;
-}
-
-.footerList li {
-  padding: 5px;
-}
-
-.footerItem {
-  font-family: "Open Sans";
-  text-transform: uppercase;
+nav ul li a:hover, nav ul li a:active {
+  color: yellowgreen;
+  text-decoration: underline;
 }/*# sourceMappingURL=main.css.map */
