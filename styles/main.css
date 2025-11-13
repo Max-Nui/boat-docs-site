@@ -2,13 +2,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Michroma&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&display=swap");
 body {
-  background-image: url("images/bg.jpg");
+  background-image: url("../images/bg.jpg");
+  background-attachment: fixed;
   font-family: "Open Sans";
   margin: 0;
 }
 
 .topbar {
-  background: rgba(107, 107, 107, 0.5);
+  background: rgba(107, 107, 107, 0.9);
   padding: 1em;
   text-align: center;
 }
@@ -70,4 +71,127 @@ ul li a:hover, ul li a:active {
 
 .currentPage {
   font-weight: bold;
+}
+
+.hero {
+  margin-top: 200px;
+  margin-left: 900px;
+  margin-right: 900px;
+  margin-bottom: -200px;
+  padding-top: -300px;
+  padding-bottom: 400px;
+}
+
+.subhero {
+  background: rgba(16, 224, 16, 0.8);
+  padding: 100px;
+  text-align: center;
+  border-radius: 25px;
+}
+
+.serviceTitle {
+  font-family: "Open Sans";
+  text-transform: uppercase;
+  font-size: 60px;
+  text-decoration: none;
+  font-weight: normal;
+  color: black;
+  margin: auto;
+  display: block;
+}
+
+.serviceButton {
+  font-family: "Open Sans";
+  text-transform: uppercase;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: normal;
+  color: black;
+  display: block;
+  margin: auto;
+  margin-top: 30px;
+  padding: 12px;
+}
+
+.mainbody {
+  background: rgb(107, 107, 107);
+}
+
+.gallery {
+  width: 50%;
+  height: 700px;
+  padding: 20px;
+  display: flex;
+  gap: 4vw;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  anchor-name: --my-carousel;
+  margin: auto;
+}
+
+.galleryimg {
+  width: 1200px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-left: 500px;
+  margin-right: 500px;
+}
+
+.column {
+  padding: 10px;
+}
+
+.column h3 {
+  font-family: "Michroma";
+  text-transform: uppercase;
+  text-align: center;
+  color: whitesmoke;
+}
+
+.column p {
+  font-family: "Open Sans";
+  color: whitesmoke;
+}
+
+.closingmessage {
+  text-align: center;
+  text-transform: uppercase;
+  color: whitesmoke;
+  font-family: "Open Sans";
+  font-size: 40px;
+}
+
+.closingbutton {
+  display: block;
+  margin: auto;
+  background-color: yellowgreen;
+  border: none;
+  margin-bottom: 50px;
+  font-size: 30px;
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.footer {
+  background-color: #bababa;
+}
+
+.footerList {
+  display: table;
+  margin: auto;
+}
+
+.footerList li {
+  padding: 5px;
+}
+
+.footerItem {
+  font-family: "Open Sans";
+  text-transform: uppercase;
 }/*# sourceMappingURL=main.css.map */
