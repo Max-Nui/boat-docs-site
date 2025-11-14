@@ -37,6 +37,7 @@ section {
 }
 
 nav {
+  display: none;
   background-color: rgba(245, 245, 245, 0.9);
   position: fixed;
   z-index: 998;
@@ -67,4 +68,30 @@ nav ul li a:link, nav ul li a:visited {
 nav ul li a:hover, nav ul li a:active {
   color: yellowgreen;
   text-decoration: underline;
+}
+
+.hero .subhero {
+  display: block;
+  margin: 0 auto;
+  background-color: rgba(154, 205, 50, 0.9);
+  border-radius: 0.75em;
+  padding: 1em;
+  margin-top: 3em;
+  max-width: 50em;
+}
+.hero .subhero .calltoaction {
+  text-align: center;
+  font-family: "Orbitron";
+  text-transform: uppercase;
+}
+.hero .subhero .actionbutton {
+  display: block;
+  margin: 0.5em auto;
+  padding: 0.5em;
+  background-color: green;
+  text-decoration: none;
+  border-radius: 0.5em;
+  font-family: "Orbitron";
+  text-transform: uppercase;
+  border-style: none;
 }/*# sourceMappingURL=main.css.map */
