@@ -102,4 +102,22 @@ nav ul li a:hover, nav ul li a:active {
 .hero .subhero .actionbutton:hover, .hero .subhero .actionbutton:active {
   background-color: yellowgreen;
   color: whitesmoke;
+}
+
+.mainbody {
+  background-color: rgba(82, 81, 81, 0.9);
+  margin-top: 5em;
+}
+.mainbody .container .column {
+  display: inline-block;
+}
+.mainbody .container .column h3 {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Orbitron";
+  color: yellowgreen;
+}
+.mainbody .container .column p {
+  font-family: "Open Sans";
+  color: whitesmoke;
 }/*# sourceMappingURL=main.css.map */

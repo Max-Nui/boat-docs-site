@@ -126,3 +126,28 @@ nav
         }
     }
 }
+
+.mainbody
+{
+    background-color: rgba(82, 81, 81, 0.9);
+    margin-top: 5em;
+    .container
+    {
+        .column
+        {
+            display:inline-block;
+            h3 
+            {
+                text-align: center;
+                text-transform: uppercase;
+                font-family: "Orbitron";
+                color: yellowgreen;
+            }
+            p 
+            {
+                font-family: "Open Sans";
+                color: whitesmoke;
+            }
+        }
+    }
+}
