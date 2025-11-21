@@ -46,6 +46,9 @@ nav {
   right: 0;
   height: 100vh;
 }
+nav.menu-btn {
+  display: block;
+}
 nav ul {
   list-style-type: none;
   margin-top: 0.5em;
@@ -143,7 +146,7 @@ nav ul li a:hover, nav ul li a:active {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 .servicesprovided .servicestable li {
   margin: 1.5em;
@@ -160,4 +163,26 @@ nav ul li a:hover, nav ul li a:active {
   max-width: 8em;
   font-size: 0.8em;
   margin: auto;
+}
+
+.footer {
+  margin-bottom: 0;
+}
+.footer .footerList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 100%;
+}
+.footer .footerList li {
+  color: whitesmoke;
+  margin: 1em;
+  text-transform: uppercase;
+}
+.footer .footerList li a {
+  text-decoration: none;
+  color: yellowgreen;
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */

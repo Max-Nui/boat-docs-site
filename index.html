@@ -9,13 +9,13 @@
 <body>
   <div class="navblock">
     <ul>
-      <li><img class="logo" src="images/BoatDocsLogo.svg" height="70en"></li>
-      <li><img class="burger" src="images/burgermenu.svg" height="30en"></li>
+      <li><a class="logo" href="#"><img src="images/BoatDocsLogo.svg" height="70en"></a></li>
+      <li><img id="burger" class="burger" src="images/burgermenu.svg" height="30en"></li>
     </ul>
   </div>
-  <nav>
+  <nav id = "nav">
       <ul id="navbar">
-        <li><img class="burger" src="images/burgermenugreen.svg" height="30en"></li>
+        <li><img id="burgerClose" class="burger" src="images/burgermenugreen.svg" height="30en"></li>
         <li><a href="#">Home</a></li>
         <li><a href="#">Service Agreement</a></li>
         <li><a href="#">Contact Us</a></li>
@@ -51,30 +51,42 @@
         <p>We have been serving the Lake of The Ozarks for 30 years! That means you get the best service possible from experienced mechanics, who prioritize getting you and your boat out on the water on your schedule. Keep an eye out for our bright green trucks as we travel around the lake!</p>
       </div>
       <div class="column">
-        <h3>Competitive Excellence</h3>
-        <p>After 30 years, we remain as one of the few boat repair businesses not tied into a marina. This allows for increased mobility and removes the need for predatory marina fees to pay for overhead. This also means there’s no need to drive your boat to a marina, we will come to you!</p>
-      </div>
-      <div class="column">
         <h3>Premiere Care</h3>
         <p>The Boat Docs remains a major competitor at the lake for one good reason, quality. How many times have you hired a mechanic, and when you returned found greasy hand prints, keys in the wrong place, and generally amateur mistakes? Not so, with our doctors. Let us put our 30 years of experience to work for you, and never suffer from a sloppy mistake again!</p>
       </div>
+      <div class="column">
+        <h3>Competitive Excellence</h3>
+        <p>After 30 years, we remain as one of the few boat repair businesses not tied into a marina. This allows for increased mobility and removes the need for predatory marina fees to pay for overhead. This also means there’s no need to drive your boat to a marina, we will come to you!</p>
+      </div>
     </div>
-  </section>
-  <section class="footer">
-    <div>
-      <ul class="footerList">
-        <li><p class="footerItem">© 2025 The Boat Docs</p></li>
-        <li><p class="footerItem">PO Box 3652 Camdenton, MO 65020</p></li>
-        <li><p class="footerItem">1-573-480-1992</p></li>
-        <li><a class="footerItem" href="#">kevin@theboatdocs.com</a></li>
-      </ul>
-    </div>
-    <div>
-      <img src="images/facebook.png">
-      <img src="images/instagram.png">
-    </div>
+    <section class="footer">
+        <ul class="footerList">
+          <li><p class="footerItem">© 2025 The Boat Docs</p></li>
+          <li><p class="footerItem">PO Box 3652 Camdenton, MO 65020</p></li>
+          <li><p class="footerItem">1-573-480-1992</p></li>
+          <li><a class="footerItem" href="#">kevin@theboatdocs.com</a></li>
+          <li><img src="images/facebook.png"></li>
+          <li><img src="images/instagram.png"></li>
+        </ul>
+    </section>
   </section>
 
-  <script rel="scripts/main.js"></script>
+
+  <script>
+
+    const mobileBtn = document.getElementById('burger')
+      nav = document.getElementById('nav')
+      mobileBtnExit = document.getElementById('burgerClose');
+
+    mobileBtn.addEventListener('click', () => {
+      nav.classList.add('menu-btn');
+      test.classList.add('menu-btn')
+    })
+
+    mobileBtnExit.addEventListener('click', () => {
+      nav.classList.remove('menu-btn');
+    })
+
+  </script>
 </body>
 </html>

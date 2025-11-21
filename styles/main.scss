@@ -45,6 +45,7 @@ section
         }
     }
 }
+
 nav
 {
     display: none;
@@ -55,6 +56,10 @@ nav
     top: 0;
     right: 0;
     height: 100vh;
+    &.menu-btn
+    {
+        display: block;
+    }
     ul 
     {
         list-style-type: none;
@@ -175,14 +180,16 @@ nav
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         li 
         {
+            
             margin: 1.5em;
             img 
             {
                 height: 6em;
                 margin: .5em;
+                
             }
             p 
             {
@@ -193,6 +200,32 @@ nav
                 max-width: 8em;
                 font-size: .8em;
                 margin: auto;
+            }
+        }
+    }
+}
+
+.footer
+{
+    margin-bottom: 0;
+    .footerList
+    {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        font-size: 100%;
+        li 
+        {
+            color: whitesmoke;
+            margin: 1em;
+            text-transform: uppercase;
+            a 
+            {
+                text-decoration: none;
+                color: yellowgreen;
+                text-align: center;
             }
         }
     }
