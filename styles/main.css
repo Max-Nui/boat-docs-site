@@ -37,6 +37,7 @@ section {
 }
 
 nav {
+  display: none;
   background-color: rgba(245, 245, 245, 0.9);
   position: fixed;
   z-index: 998;
