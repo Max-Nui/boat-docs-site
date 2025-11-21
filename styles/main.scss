@@ -133,9 +133,14 @@ nav
     margin-top: 5em;
     .container
     {
+        display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
         .column
         {
-            display: inline-block;
+            margin: 2em;
             h3 
             {
                 text-align: center;
@@ -147,6 +152,8 @@ nav
             {
                 font-family: "Open Sans";
                 color: whitesmoke;
+                text-align: center;
+                width: 20em;
             }
         }
     }
@@ -160,16 +167,22 @@ nav
         text-transform: uppercase;
         text-align: center;
         color: yellowgreen;
+        font-size: 2em;
     }
     .servicestable
     {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
         li 
         {
-            display: grid;
-            place-items: center;
+            margin: 1.5em;
             img 
             {
-                height: 5em;
+                height: 6em;
+                margin: .5em;
             }
             p 
             {
@@ -177,6 +190,9 @@ nav
                 text-transform: uppercase;
                 color: whitesmoke;
                 text-align: center;
+                max-width: 8em;
+                font-size: .8em;
+                margin: auto;
             }
         }
     }

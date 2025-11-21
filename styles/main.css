@@ -108,8 +108,15 @@ nav ul li a:hover, nav ul li a:active {
   background-color: rgba(82, 81, 81, 0.9);
   margin-top: 5em;
 }
+.mainbody .container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
 .mainbody .container .column {
-  display: inline-block;
+  margin: 2em;
 }
 .mainbody .container .column h3 {
   text-align: center;
@@ -120,6 +127,8 @@ nav ul li a:hover, nav ul li a:active {
 .mainbody .container .column p {
   font-family: "Open Sans";
   color: whitesmoke;
+  text-align: center;
+  width: 20em;
 }
 
 .servicesprovided h2 {
@@ -127,17 +136,28 @@ nav ul li a:hover, nav ul li a:active {
   text-transform: uppercase;
   text-align: center;
   color: yellowgreen;
+  font-size: 2em;
+}
+.servicesprovided .servicestable {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 .servicesprovided .servicestable li {
-  display: grid;
-  place-items: center;
+  margin: 1.5em;
 }
 .servicesprovided .servicestable li img {
-  height: 5em;
+  height: 6em;
+  margin: 0.5em;
 }
 .servicesprovided .servicestable li p {
   font-family: "Orbitron";
   text-transform: uppercase;
   color: whitesmoke;
   text-align: center;
+  max-width: 8em;
+  font-size: 0.8em;
+  margin: auto;
 }/*# sourceMappingURL=main.css.map */
