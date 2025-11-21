@@ -135,7 +135,7 @@ nav
     {
         .column
         {
-            display:inline-block;
+            display: inline-block;
             h3 
             {
                 text-align: center;
@@ -147,6 +147,36 @@ nav
             {
                 font-family: "Open Sans";
                 color: whitesmoke;
+            }
+        }
+    }
+}
+
+.servicesprovided
+{
+    h2 
+    {
+        font-family: "Orbitron";
+        text-transform: uppercase;
+        text-align: center;
+        color: yellowgreen;
+    }
+    .servicestable
+    {
+        li 
+        {
+            display: grid;
+            place-items: center;
+            img 
+            {
+                height: 5em;
+            }
+            p 
+            {
+                font-family: "Orbitron";
+                text-transform: uppercase;
+                color: whitesmoke;
+                text-align: center;
             }
         }
     }

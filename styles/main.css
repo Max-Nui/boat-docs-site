@@ -120,4 +120,24 @@ nav ul li a:hover, nav ul li a:active {
 .mainbody .container .column p {
   font-family: "Open Sans";
   color: whitesmoke;
+}
+
+.servicesprovided h2 {
+  font-family: "Orbitron";
+  text-transform: uppercase;
+  text-align: center;
+  color: yellowgreen;
+}
+.servicesprovided .servicestable li {
+  display: grid;
+  place-items: center;
+}
+.servicesprovided .servicestable li img {
+  height: 5em;
+}
+.servicesprovided .servicestable li p {
+  font-family: "Orbitron";
+  text-transform: uppercase;
+  color: whitesmoke;
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */
