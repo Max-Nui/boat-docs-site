@@ -53,6 +53,7 @@ nav
     position: fixed;
     z-index: 998;
     width: 60%;
+    max-width: 20em;
     top: 0;
     right: 0;
     height: 100vh;
@@ -72,9 +73,13 @@ nav
         li
         {
             margin-top: 1em;
+            img 
+            {
+                margin-bottom: 1em;
+            }
             a 
             {
-                font-size: 1.3em;
+                font-size: 1.2em;
             }
             a:link, a:visited
             {
@@ -142,7 +147,7 @@ nav
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
         .column
         {
             margin: 2em;
@@ -215,11 +220,14 @@ nav
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        font-size: 100%;
+        font-size: calc(9px + .1vw);
+        
         li 
         {
             color: whitesmoke;
-            margin: 1em;
+            margin: 0;
+            margin-left: 1em;
+            margin-right: 1em;
             text-transform: uppercase;
             a 
             {

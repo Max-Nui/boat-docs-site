@@ -42,6 +42,7 @@ nav {
   position: fixed;
   z-index: 998;
   width: 60%;
+  max-width: 20em;
   top: 0;
   right: 0;
   height: 100vh;
@@ -61,8 +62,11 @@ nav ul {
 nav ul li {
   margin-top: 1em;
 }
+nav ul li img {
+  margin-bottom: 1em;
+}
 nav ul li a {
-  font-size: 1.3em;
+  font-size: 1.2em;
 }
 nav ul li a:link, nav ul li a:visited {
   text-decoration: none;
@@ -116,7 +120,7 @@ nav ul li a:hover, nav ul li a:active {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 .mainbody .container .column {
   margin: 2em;
@@ -174,11 +178,13 @@ nav ul li a:hover, nav ul li a:active {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  font-size: 100%;
+  font-size: calc(9px + 0.1vw);
 }
 .footer .footerList li {
   color: whitesmoke;
-  margin: 1em;
+  margin: 0;
+  margin-left: 1em;
+  margin-right: 1em;
   text-transform: uppercase;
 }
 .footer .footerList li a {
