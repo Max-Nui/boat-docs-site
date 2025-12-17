@@ -40,7 +40,6 @@ section
                 cursor: pointer;
                 margin: 1em;
                 margin-top: 1.5em;
-                
             }
         }
     }
@@ -76,6 +75,7 @@ nav
             img 
             {
                 margin-bottom: 1em;
+                cursor: pointer;
             }
             a 
             {
@@ -98,41 +98,47 @@ nav
 
 .hero
 {
-    .subhero
+    a 
     {
-        display: block;
-        margin: 0 auto;
-        background-color: rgba(154, 205, 50, .9);
-        border-radius: .75em;
-        padding: 1em;
-        margin-top: 3em;
-        max-width: 50em;
-        .calltoaction
+        text-decoration: none;
+        .subhero
         {
-            text-align: center;
-            font-family: "Orbitron";
-            text-transform: uppercase;
-            font-size: 2em;
-        }
-        .actionbutton
-        {
-            text-align: center;
             display: block;
-            margin: .5em auto;
-            padding: .5em;
-            background-color: green;
-            text-decoration: none;
-            border-radius: .5em;
-            font-family: "Orbitron";
-            text-transform: uppercase;
-            border-style: none;
-            color: black;
-            font-size: 1.5em;
-        }
-        .actionbutton:hover, .actionbutton:active
-        {
-            background-color: yellowgreen;
-            color: whitesmoke;
+            margin: 0 auto;
+            background-color: rgba(154, 205, 50, .9);
+            border-radius: .75em;
+            padding: 1em;
+            margin-top: 3em;
+            max-width: 50em;
+            .calltoaction
+            {
+                text-align: center;
+                font-family: "Orbitron";
+                text-transform: uppercase;
+                font-size: 2em;
+                color: black;
+            }
+            .actionbutton
+            {
+                text-align: center;
+                display: block;
+                margin: .5em auto;
+                padding: .5em;
+                background-color: green;
+                text-decoration: none;
+                border-radius: .5em;
+                font-family: "Orbitron";
+                text-transform: uppercase;
+                border-style: none;
+                color: black;
+                font-size: 1.5em;
+                cursor: pointer;
+            }
+            .actionbutton:hover, .actionbutton:active
+            {
+                background-color: yellowgreen;
+                color: whitesmoke;
+            }
         }
     }
 }
@@ -205,6 +211,18 @@ nav
                 max-width: 8em;
                 font-size: .8em;
                 margin: auto;
+            }
+            .engine-repair-sel
+            {
+                display: none;
+            }
+            img.selected
+            {
+                display: block;
+            }
+            img.unselected
+            {
+                display: none;
             }
         }
     }
