@@ -1,8 +1,25 @@
+@font-face
+{
+    font-family: 'Orbitron';
+    src: url("/fonts/Orbitron-VariableFont_wght.woff2") format("woff2"), url("/fonts/Orbitron-VariableFont_wght.woff2") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face
+{
+    font-family: 'Open Sans';
+    src: url("/fonts/OpenSans-VariableFont_wdth,wght.woff2") format("woff2"), url("/fonts/OpenSans-VariableFont_wdth,wght.woff2") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 body
 {
     background-image: url("../images/bg.jpg");
     background-attachment: fixed;
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', system-ui, sans-serif;
     background-position: center;
     margin: 0;
 }
@@ -64,7 +81,7 @@ nav
         padding: 1em;
         text-align: right;
         text-transform: uppercase;
-        font-family: 'Orbitron', sans-serif;
+        font-family: 'Orbitron', system-ui, sans-serif;
         li
         {
             margin-top: 1em;
@@ -109,7 +126,7 @@ nav
             .calltoaction
             {
                 text-align: center;
-                font-family: 'Orbitron', sans-serif;
+                font-family: 'Orbitron', system-ui, sans-serif;
                 text-transform: uppercase;
                 font-size: 2em;
                 color: black;
@@ -123,7 +140,7 @@ nav
                 background-color: green;
                 text-decoration: none;
                 border-radius: .5em;
-                font-family: 'Orbitron', sans-serif;
+                font-family: 'Orbitron', system-ui, sans-serif;
                 text-transform: uppercase;
                 border-style: none;
                 color: black;
@@ -157,12 +174,12 @@ nav
             {
                 text-align: center;
                 text-transform: uppercase;
-                font-family: 'Orbitron', sans-serif;
+                font-family: 'Orbitron', system-ui, sans-serif;
                 color: yellowgreen;
             }
             p 
             {
-                font-family: "Open Sans";
+                font-family: "Open Sans", system-ui, sans-serif;
                 color: whitesmoke;
                 text-align: center;
                 width: 20em;
@@ -175,7 +192,7 @@ nav
 {
     h3
     {
-        font-family: 'Orbitron', sans-serif;
+        font-family: 'Orbitron', system-ui, sans-serif;
         text-transform: uppercase;
         text-align: center;
         color: yellowgreen;
@@ -205,7 +222,7 @@ nav
             }
             p 
             {
-                font-family: 'Orbitron', sans-serif;
+                font-family: 'Orbitron', system-ui, sans-serif;
                 text-transform: uppercase;
                 color: whitesmoke;
                 text-align: center;
@@ -228,7 +245,7 @@ nav
         display: none;
         max-width: 800px;
         margin: auto;
-        font-family: 'Orbitron', sans-serif;
+        font-family: 'Orbitron', system-ui, sans-serif;
         h3 
         {
             color: yellowgreen;
