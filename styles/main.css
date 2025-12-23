@@ -1,6 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Michroma&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&display=swap");
 body {
   background-image: url("../images/bg.jpg");
   background-attachment: fixed;
@@ -57,7 +54,7 @@ nav ul {
   padding: 1em;
   text-align: right;
   text-transform: uppercase;
-  font-family: "Orbitron";
+  font-family: "Orbitron", sans-serif;
 }
 nav ul li {
   margin-top: 1em;
@@ -92,7 +89,7 @@ nav ul li a:hover, nav ul li a:active {
 }
 .hero a .subhero .calltoaction {
   text-align: center;
-  font-family: "Orbitron";
+  font-family: "Orbitron", sans-serif;
   text-transform: uppercase;
   font-size: 2em;
   color: black;
@@ -105,7 +102,7 @@ nav ul li a:hover, nav ul li a:active {
   background-color: green;
   text-decoration: none;
   border-radius: 0.5em;
-  font-family: "Orbitron";
+  font-family: "Orbitron", sans-serif;
   text-transform: uppercase;
   border-style: none;
   color: black;
@@ -134,7 +131,7 @@ nav ul li a:hover, nav ul li a:active {
 .mainbody .container .column h3 {
   text-align: center;
   text-transform: uppercase;
-  font-family: "Orbitron";
+  font-family: "Orbitron", sans-serif;
   color: yellowgreen;
 }
 .mainbody .container .column p {
@@ -145,7 +142,7 @@ nav ul li a:hover, nav ul li a:active {
 }
 
 .servicesprovided h3 {
-  font-family: "Orbitron";
+  font-family: "Orbitron", sans-serif;
   text-transform: uppercase;
   text-align: center;
   color: yellowgreen;
@@ -159,7 +156,7 @@ nav ul li a:hover, nav ul li a:active {
   align-items: flex-start;
 }
 .servicesprovided .servicestable li {
-  margin: 1.5em;
+  margin: 1%;
 }
 .servicesprovided .servicestable li .service-icon {
   height: 6em;
@@ -171,7 +168,7 @@ nav ul li a:hover, nav ul li a:active {
   transform: scale(1.05);
 }
 .servicesprovided .servicestable li p {
-  font-family: "Orbitron";
+  font-family: "Orbitron", sans-serif;
   text-transform: uppercase;
   color: whitesmoke;
   text-align: center;
@@ -186,10 +183,19 @@ nav ul li a:hover, nav ul li a:active {
 }
 .service-description .service-text {
   display: none;
-  max-width: 600px;
+  max-width: 800px;
   margin: auto;
-  font-family: "Orbitron";
+  font-family: "Orbitron", sans-serif;
+}
+.service-description .service-text h3 {
+  color: yellowgreen;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+.service-description .service-text p {
   color: whitesmoke;
+  font-style: italic;
+  font-size: 1.2em;
 }
 .service-description .service-text.active {
   display: block;
