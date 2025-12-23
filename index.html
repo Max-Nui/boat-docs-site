@@ -128,19 +128,32 @@
   <script>
 
     const mobileBtn = document.getElementById('burger')
-      nav = document.getElementById('nav')
       mobileBtnExit = document.getElementById('burgerClose')
+      nav = document.getElementById('nav')
 
       icons = document.querySelectorAll('.service-icon')
       texts = document.querySelectorAll('.service-text')
 
     //burger icon logic
-    mobileBtn.addEventListener('click', () => {
+    mobileBtn.addEventListener('click', (e) => {
       nav.classList.add('menu-btn');
+      e.stopPropagation();
     });
 
-    mobileBtnExit.addEventListener('click', () => {
+    mobileBtnExit.addEventListener('click', (e) => {
       nav.classList.remove('menu-btn');
+      e.stopPropagation();
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!nav.contains(e.target) && !mobileBtn.contains(e.target))
+      {
+        nav.classList.remove('menu-btn');
+      }
+    });
+
+    nav.addEventListener('click', (e) => {
+      e.stopPropagation();
     });
 
     //service icon logic
