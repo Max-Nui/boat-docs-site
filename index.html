@@ -35,17 +35,48 @@
 
   <section class="mainbody">
     <div class = "servicesprovided">
-      <h2>Services Provided</h2>
       <ul class="servicestable">
-        <li><img class="engine-repair" src="images/engine_repair.png"><img class="engine-repair-sel" src="images/engine_repair_sel.png"><p>Engine Repair</p></li>
-        <li><img class="winter-dewinter" src="images/winter_dewinter.png"><p>Winterize / Dewinterize</p></li>
-        <li><img class="impeller" src="images/impeller.png"><p>Seawater Impeller Replacement</p></li>
-        <li><img class="part-ordering" src="images/part_ordering.png"><p>Part Replacement</p></li>
-        <li><img class="mobile" src="images/mobile.png"><p>Mobile Service</p></li>
-        <li><img class="insurance" src="images/insurance.png"><p>Insurance Repair</p></li>
-        <li><img class="marine-system" src="images/marine_system.png"><p>Marine System Maintenance</p></li>
-        <li><img class="buffing" src="images/buffing.png"><p>Compound, Buffing, Polishing</p></li>
+        <li><img class="service-icon" src="images/engine_repair.png" data-default="images/engine_repair.png" data-selected="images/engine_repair_sel.png" data-content="engine"><p>Engine Repair</p></li>
+        <li><img class="service-icon" src="images/winter_dewinter.png" data-default="images/winter_dewinter.png" data-selected="images/winter_dewinter_sel.png" data-content="winter"><p>Winterize / Dewinterize</p></li>
+        <li><img class="service-icon" src="images/impeller.png" data-default="images/impeller.png" data-selected="images/impeller_sel.png" data-content="impeller"><p>Seawater Impeller Replacement</p></li>
+        <li><img class="service-icon" src="images/part_ordering.png" data-default="images/part_ordering.png" data-selected="images/part_ordering_sel.png" data-content="parts"><p>Part Replacement</p></li>
+        <li><img class="service-icon" src="images/mobile.png" data-default="images/mobile.png" data-selected="images/mobile_sel.png" data-content="mobile"><p>Mobile Service</p></li>
+        <li><img class="service-icon" src="images/insurance.png" data-default="images/insurance.png" data-selected="images/insurance_sel.png" data-content="insurance"><p>Insurance Repair</p></li>
+        <li><img class="service-icon" src="images/marine_system.png" data-default="images/marine_system.png" data-selected="images/marine_system_sel.png" data-content="marine"><p>Marine System Maintenance</p></li>
+        <li><img class="service-icon" src="images/buffing.png" data-default="images/buffing.png" data-selected="images/buffing_sel.png" data-content="buffing"><p>Compound, Buffing, Polishing</p></li>
       </ul>
+      <h3>Select a Service to find out more!</h3>
+    </div>
+    <div class="service-description">
+      <!--Placeholder (visible by default)-->
+      <div class="service-text active" id="placeholder">
+        <p>Select a service above to see more information!</p>
+      </div>
+      <!--Service specific content-->
+      <div class="service-text" id="engine">
+        <p>Complete diagnostics, repair, and installation of marine engines, performed on-site or at dockside.</p>
+      </div>
+      <div class="service-text" id="winter">
+        <p>Seasonal winterization and de-winterization to protect your vessel and ensure reliable performance year-round.</p>
+      </div>
+      <div class="service-text" id="impeller">
+        <p>impeller test</p>
+      </div>
+      <div class="service-text" id="parts">
+        <p>parts test</p>
+      </div>
+      <div class="service-text" id="mobile">
+        <p>mobile test</p>
+      </div>
+      <div class="service-text" id="insurance">
+        <p>insurance test</p>
+      </div>
+      <div class="service-text" id="marine">
+        <p>marine test</p>
+      </div>
+      <div class="service-text" id="buffing">
+        <p>buffing test</p>
+      </div>
     </div>
     <div class="container">
       <div class="column">
@@ -80,10 +111,10 @@
       nav = document.getElementById('nav')
       mobileBtnExit = document.getElementById('burgerClose')
 
-      engineRepair = document.querySelector('.engine-repair')
-      engineRepairSel = document.querySelector('.engine-repair-sel')
-      
+      icons = document.querySelectorAll('.service-icon')
+      texts = document.querySelectorAll('.service-text')
 
+    //burger icon logic
     mobileBtn.addEventListener('click', () => {
       nav.classList.add('menu-btn');
     });
@@ -92,10 +123,51 @@
       nav.classList.remove('menu-btn');
     });
 
-    engineRepair.addEventListener('click', () => {
-      engineRepair.classList.add('unselected');
-      engineRepairSel.classList.add('selected');
-    });
+    //service icon logic
+    function resetIcons() 
+    { 
+      icons.forEach(icon => 
+        {
+          icon.src = icon.dataset.default;
+          icon.classList.remove('active');
+        }
+      );
+    }
+
+    function resetText()
+    {
+      texts.forEach(text => 
+        {
+          text.classList.remove('active');
+        }
+      );
+    }
+
+    icons.forEach(icon => 
+      {
+        icon.addEventListener('click', () =>
+          {
+            const targetId = icon.dataset.content;
+
+            //reset everything
+            resetIcons();
+            resetText();
+
+            //activate icon
+            icon.src = icon.dataset.selected;
+            icon.classList.add('active');
+
+            //activate text
+            document.getElementById(targetId).classList.add('active');
+          }
+        );
+      }
+    );
+
+
+
+
+
 
 
 

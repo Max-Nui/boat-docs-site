@@ -177,7 +177,7 @@ nav
 
 .servicesprovided
 {
-    h2 
+    h3
     {
         font-family: "Orbitron";
         text-transform: uppercase;
@@ -196,11 +196,16 @@ nav
         {
             
             margin: 1.5em;
-            img 
+            .service-icon
             {
                 height: 6em;
                 margin: .5em;
-                
+                cursor: pointer;
+                transition: transform .15s ease;
+            }
+            .service-icon.active 
+            {
+                transform: scale(1.05);
             }
             p 
             {
@@ -212,19 +217,27 @@ nav
                 font-size: .8em;
                 margin: auto;
             }
-            .engine-repair-sel
-            {
-                display: none;
-            }
-            img.selected
-            {
-                display: block;
-            }
-            img.unselected
-            {
-                display: none;
-            }
+            
         }
+    }
+}
+
+.service-description
+{
+    margin-top: 2em;
+    text-align: center;
+
+    .service-text
+    {
+        display: none;
+        max-width: 600px;
+        margin: auto;
+        font-family: "Orbitron";
+        color: whitesmoke;
+    }
+    .service-text.active
+    {
+        display: block;
     }
 }
 

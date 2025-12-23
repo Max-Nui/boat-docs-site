@@ -144,7 +144,7 @@ nav ul li a:hover, nav ul li a:active {
   width: 20em;
 }
 
-.servicesprovided h2 {
+.servicesprovided h3 {
   font-family: "Orbitron";
   text-transform: uppercase;
   text-align: center;
@@ -161,9 +161,14 @@ nav ul li a:hover, nav ul li a:active {
 .servicesprovided .servicestable li {
   margin: 1.5em;
 }
-.servicesprovided .servicestable li img {
+.servicesprovided .servicestable li .service-icon {
   height: 6em;
   margin: 0.5em;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+.servicesprovided .servicestable li .service-icon.active {
+  transform: scale(1.05);
 }
 .servicesprovided .servicestable li p {
   font-family: "Orbitron";
@@ -174,14 +179,20 @@ nav ul li a:hover, nav ul li a:active {
   font-size: 0.8em;
   margin: auto;
 }
-.servicesprovided .servicestable li .engine-repair-sel {
-  display: none;
+
+.service-description {
+  margin-top: 2em;
+  text-align: center;
 }
-.servicesprovided .servicestable li img.selected {
+.service-description .service-text {
+  display: none;
+  max-width: 600px;
+  margin: auto;
+  font-family: "Orbitron";
+  color: whitesmoke;
+}
+.service-description .service-text.active {
   display: block;
-}
-.servicesprovided .servicestable li img.unselected {
-  display: none;
 }
 
 .footer {
