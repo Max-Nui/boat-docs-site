@@ -133,6 +133,7 @@ nav ul li a:hover, nav ul li a:active {
   margin-top: 5em;
 }
 .mainbody .container {
+  margin-top: 2em;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -160,7 +161,7 @@ nav ul li a:hover, nav ul li a:active {
   text-transform: uppercase;
   text-align: center;
   color: yellowgreen;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 .servicesprovided .servicestable {
   display: flex;
@@ -194,6 +195,7 @@ nav ul li a:hover, nav ul li a:active {
 .service-description {
   margin-top: 2em;
   text-align: center;
+  margin-bottom: 5em;
 }
 .service-description .service-text {
   display: none;
