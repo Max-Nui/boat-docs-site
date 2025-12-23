@@ -248,15 +248,16 @@ nav
         display: none;
         max-width: 800px;
         margin: auto;
-        font-family: 'Orbitron', system-ui, sans-serif;
         h3 
         {
+            font-family: 'Orbitron', system-ui, sans-serif;
             color: yellowgreen;
             font-size: 1.5em;
             text-transform: uppercase;
         }
         p 
         {
+            font-family: 'Open Sans', system-ui, sans-serif;
             color: whitesmoke;
             font-style: italic;
             font-size: 1.1em;
