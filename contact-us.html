@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | The Boat Docs</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/images/favicon.png" type="image/png">
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <div class="navblock">
+    <ul>
+      <li><a class="logo" href="index.html"><img src="images/BoatDocsLogo.svg" height="70en"></a></li>
+      <li><img id="burger" class="burger" src="images/burgermenu.svg" height="30en"></li>
+    </ul>
+  </div>
+  <nav id = "nav">
+      <ul id="navbar">
+        <li><img id="burgerClose" class="burgerClose" src="images/burgermenugreen.svg" height="30en"></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="service_agreement.html">Service Agreement</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="where-is-your-doctor.html">Where is your Doctor Today?</a></li>
+        <li><a href="pay-us.html">Pay Us</a></li>
+      </ul>
+  </nav>
+
+<section class="hero">
+  <h1>Contact Us</h1>
+</section>
+
+<section class="mainbody">
+  <hr>
+  <section class="footer">
+      <ul class="footerList">
+        <li><p>© 2025 The Boat Docs</p></li>
+        <li><p>PO Box 3652 Camdenton, MO 65020</p></li>
+        <li><p>1-573-480-1992</p></li>
+        <li><a href="mailto:kevin@theboatdocs.com">kevin@theboatdocs.com</a></li>
+        <li><img src="images/facebook.png"></li>
+        <li><img src="images/instagram.png"></li>
+      </ul>
+  </section>
+</section>
+
+
+<script>
+    const mobileBtn = document.getElementById('burger')
+      mobileBtnExit = document.getElementById('burgerClose')
+      nav = document.getElementById('nav')
+
+      icons = document.querySelectorAll('.service-icon')
+      texts = document.querySelectorAll('.service-text')
+
+    //burger icon logic
+    mobileBtn.addEventListener('click', (e) => {
+      nav.classList.add('menu-btn');
+      e.stopPropagation();
+    });
+
+    mobileBtnExit.addEventListener('click', (e) => {
+      nav.classList.remove('menu-btn');
+      e.stopPropagation();
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!nav.contains(e.target) && !mobileBtn.contains(e.target))
+      {
+        nav.classList.remove('menu-btn');
+      }
+    });
+
+    nav.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+  </script>
+</body>
+</html>

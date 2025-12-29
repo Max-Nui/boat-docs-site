@@ -290,6 +290,7 @@ nav
         max-width: 600px;
         margin: auto;
         margin-bottom: 2em;
+        display: block;
 
         h3 
         {
@@ -310,9 +311,13 @@ nav
             label
             {
                 display: flex;
-                align-items: center;
                 gap: .4em;
                 cursor: pointer;
+                input 
+                {
+                    width: 20px;
+                    height: 20px;
+                }
             }
             
 

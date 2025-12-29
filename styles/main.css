@@ -233,6 +233,7 @@ nav ul li a:hover, nav ul li a:active {
   max-width: 600px;
   margin: auto;
   margin-bottom: 2em;
+  display: block;
 }
 .serviceagreementform form h3 {
   font-style: italic;
@@ -250,9 +251,12 @@ nav ul li a:hover, nav ul li a:active {
 }
 .serviceagreementform form fieldset label {
   display: flex;
-  align-items: center;
   gap: 0.4em;
   cursor: pointer;
+}
+.serviceagreementform form fieldset label input {
+  width: 20px;
+  height: 20px;
 }
 .serviceagreementform form label {
   display: block;
