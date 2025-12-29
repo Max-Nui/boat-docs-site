@@ -89,6 +89,9 @@ nav ul li a:hover, nav ul li a:active {
   text-decoration: underline;
 }
 
+.hero {
+  margin-bottom: 2em;
+}
 .hero a {
   text-decoration: none;
 }
@@ -127,10 +130,16 @@ nav ul li a:hover, nav ul li a:active {
   background-color: yellowgreen;
   color: whitesmoke;
 }
+.hero h1 {
+  text-align: center;
+  font-family: "Orbitron", system-ui, sans-serif;
+  font-size: 6vw;
+  color: yellowgreen;
+  text-shadow: 2px 2px 5px black;
+}
 
 .mainbody {
   background-color: rgba(82, 81, 81, 0.9);
-  margin-top: 5em;
 }
 .mainbody .container {
   margin-top: 2em;
@@ -223,13 +232,17 @@ nav ul li a:hover, nav ul li a:active {
   color: whitesmoke;
   max-width: 600px;
   margin: auto;
+  margin-bottom: 2em;
+}
+.serviceagreementform form h3 {
+  font-style: italic;
 }
 .serviceagreementform form fieldset {
   display: flex;
   align-items: center;
   gap: 2em;
   border: none;
-  margin-bottom: 1.5em;
+  margin: 0;
 }
 .serviceagreementform form fieldset legend {
   width: 100%;
@@ -250,13 +263,29 @@ nav ul li a:hover, nav ul li a:active {
   padding: 0.6em;
   margin-top: 0.25em;
 }
+.serviceagreementform form label textarea {
+  width: 100%;
+  padding: 0.6em;
+  margin-top: 0.25em;
+}
+.serviceagreementform form label select {
+  width: 100%;
+  padding: 0.6em;
+  font-family: "Open Sans", system-ui, sans-serif;
+}
 .serviceagreementform form p {
   font-size: 0.6em;
 }
 .serviceagreementform form button {
+  display: flex;
+  margin: auto;
+  padding: 0.3em;
   font-family: "Orbitron", system-ui, sans-serif;
   font-size: 2em;
-  margin-top: 1em;
+  background-color: yellowgreen;
+  border-radius: 0.2em;
+  border: none;
+  cursor: pointer;
 }
 .serviceagreementform form .conditional {
   display: none;
