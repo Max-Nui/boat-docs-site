@@ -270,6 +270,82 @@ nav
     }
 }
 
+
+.serviceagreementform
+{
+    
+    form 
+    {
+        font-family: 'Open Sans', system-ui, sans-serif;
+        color: whitesmoke;
+        max-width: 600px;
+        margin: auto;
+
+        fieldset 
+        {
+            display: flex;
+            align-items: center;
+            gap: 2em;
+            border: none;
+            margin-bottom: 1.5em;
+            legend
+            {
+                width: 100%;
+                margin-bottom: .5em;
+            }
+            label
+            {
+                display: flex;
+                align-items: center;
+                gap: .4em;
+                cursor: pointer;
+            }
+
+        }
+        label 
+        {
+            display: block;
+            margin-bottom: 1em;
+            input 
+            {
+                width: 100%;
+                padding: .6em;
+                margin-top: .25em;
+            }
+        }
+        p 
+        {
+            font-size: .6em;
+        }
+
+        
+        button 
+        {
+            font-family: 'Orbitron', system-ui, sans-serif;
+            font-size: 2em;
+            margin-top: 1em;
+        }
+        .conditional 
+        {
+            display: none;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .footer
 {
     margin-bottom: 0;

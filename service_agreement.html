@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Agreement | The Boat Docs</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/images/favicon.png" type="image/png">
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <div class="navblock">
+    <ul>
+      <li><a class="logo" href="index.html"><img src="images/BoatDocsLogo.svg" height="70en"></a></li>
+      <li><img id="burger" class="burger" src="images/burgermenu.svg" height="30en"></li>
+    </ul>
+  </div>
+  <nav id = "nav">
+      <ul id="navbar">
+        <li><img id="burgerClose" class="burgerClose" src="images/burgermenugreen.svg" height="30en"></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Service Agreement</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Where is your Doctor Today?</a></li>
+        <li><a href="#">Pay Us</a></li>
+      </ul>
+  </nav>
+
+<section class="mainbody">
+  <div class="serviceagreementform">
+    <form name="service-agreement" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+      <!--Required for Netlify-->
+      <input type="hidden" name="form-name" value="service-agreement">
+
+      <!--Honeypot-->
+      <p hidden>
+        <label>
+          Don't fill this out:
+          <input name="bot-field">
+        </label>
+      </p>
+
+      <!-- Common Fields -->
+      <label>First Name *<input type="text" name="firstname" required></label>
+      <label>Last Name *<input type="text" name="lastname" required></label>
+
+      <!--New or Returning-->
+      <fieldset>
+        <legend>Are you a new customer? *</legend>
+        <label><input type="radio" name="new_customer" value="yes" required>Yes</label>
+        <label><input type="radio" name="new_customer" value="no">No</label>
+      </fieldset>
+
+      <!-- Seasonal Question -->
+      <div id="winterize-question" class="conditional">
+        <fieldset>
+          <legend>Are you ready to winterize? *</legend>
+          <label><input type="radio" name="ready_to_winterize" value="yes">Yes</label>
+          <label><input type="radio" name="ready_to_winterize" value="no">No</label>
+        </fieldset>
+      </div>
+
+      <!-- Address Fields (Hidden by Default) -->
+      <div id="new-customer-fields" class="conditional">
+        <label>Street Address *<input type="text" name="street_address"></label>
+        <label>City *<input type="text" name="city"></label>
+        <label>State *<input type="text" name="state"></label>
+        <label>ZIP Code *<input type="text" name="zip"></label>
+      </div>
+
+      <!-- Common Fields -->
+      <label>Email Address *<input type="email" name="email" required></label>
+      <label>Phone *<input type="tel" name="phone" required></label>
+      <label>What would you like our doctors to repair? *<input type="text" name="repairsneeded" required></label>
+      <h3>TERMS</h3>
+      <label>Electronic Signature *<input type="text" name="signature" required></label>
+      <p>By signing this agreement, I hereby authorize the above work to be done along with the necessary materials and hereby grant you and/or you employees permission to operate the vessel herein described on the waterways or elsewhere for the purpose of testing and/or inspection. I also accept financial responsibility and am willing to pay all The Boat Docs, Inc. invoices in accordance with the terms described therein. I agree to pay in full when the work is completed. I also understand that this is the policy of The Boat Docs, Inc. to charge my credit card if I am unavailable to pay by cash or check and payment is not made within 10 days. An express mechanic's lien is acknowledged on the above vessel to secure the amount of the repairs thereto. I understand that a service charge of one and a half percent per month (prorated from the due date) will be added to any delinquent accounts. Storage will begin on any trailer or boat not picked up within 10 days after notification of completion of service. If it is necessary that collection be made by suit or otherwise. I agree to pay interest until paid, along with collection costs, including a reasonable attorney fee. The Boat Docs, Inc. is NOT responsible for loss or damage to boats, motor vehicles, trailers or articles left therein in case of fire, theft, accident, freezing or any other causes beyond our control when in our custody for repair or storage. The Boat Docs, Inc. is NOT responsible for data sent by unsecured email. Please be advised and we only recommend protecting secure data such as your credit card number. For your protection, repair work will NOT begin until this signed agreement is received in our office. Our website includes a printable pdf of this contract for patients that prefer to mail this agreement. Our address is The Boat Docs PO Box 3652 Camdenton MO 65020-3652</p>
+      <fieldset>
+        <legend>Agreement *</legend>
+        <label><input type="checkbox" name="agreement" value="true">I understand that checking this box constitutes a legal signature confirming that I acknowledge and agree to the above Terms of Acceptance.</label>
+      </fieldset>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <section class="footer">
+      <ul class="footerList">
+        <li><p>© 2025 The Boat Docs</p></li>
+        <li><p>PO Box 3652 Camdenton, MO 65020</p></li>
+        <li><p>1-573-480-1992</p></li>
+        <li><a href="mailto:kevin@theboatdocs.com">kevin@theboatdocs.com</a></li>
+        <li><img src="images/facebook.png"></li>
+        <li><img src="images/instagram.png"></li>
+      </ul>
+  </section>
+</section>
+
+
+<script>
+  const mobileBtn = document.getElementById('burger')
+    mobileBtnExit = document.getElementById('burgerClose')
+    nav = document.getElementById('nav')
+
+    icons = document.querySelectorAll('.service-icon')
+    texts = document.querySelectorAll('.service-text')
+
+    customerRadios = document.querySelectorAll('input[name="new_customer"]');
+    newCustomerFields = document.getElementById('new-customer-fields');
+
+    winterizeBlock = document.getElementById('winterize-question');
+    winterizeInputs = winterizeBlock.querySelectorAll('input');
+    currentMonth = new Date().getMonth(); 
+    isWinterizeSeason = currentMonth >= 8 && currentMonth <= 11;
+
+  //burger icon logic
+  mobileBtn.addEventListener('click', (e) => {
+    nav.classList.add('menu-btn');
+    e.stopPropagation();
+  });
+
+  mobileBtnExit.addEventListener('click', (e) => {
+    nav.classList.remove('menu-btn');
+    e.stopPropagation();
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!nav.contains(e.target) && !mobileBtn.contains(e.target))
+    {
+      nav.classList.remove('menu-btn');
+    }
+  });
+
+  nav.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
+
+  //Forms logic (new customer)
+  customerRadios.forEach(radio => {
+    radio.addEventListener('change', () => {
+      if (radio.value === 'yes') {
+        newCustomerFields.style.display = 'block';
+
+        //Make address field required
+        newCustomerFields.querySelectorAll('input').forEach(input => {
+          input.required = true;
+        });
+      } else {
+        newCustomerFields.style.display = 'none';
+
+        //Remove required + clear values
+        newCustomerFields.querySelectorAll('input').forEach(input => {
+          input.required = false;
+          input.value = '';
+        });
+      }
+    });
+  });
+
+  //Forms logic (winterize)
+  if (isWinterizeSeason) {
+    winterizeBlock.style.display = 'block';
+  } else {
+    winterizeBlock.style.display = 'none';
+
+    // Ensure values are not submitted outside season
+    winterizeInputs.forEach(input => {
+      input.checked = false;
+    });
+  }
+
+
+</script>
+</body>
+</html>
