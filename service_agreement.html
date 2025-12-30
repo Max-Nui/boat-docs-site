@@ -47,18 +47,19 @@
 
       <!-- Common Fields -->
        <h3>Please fill out the form below to set up an appointment with our doctors!</h3>
+       <p>Required fields are marked with an asterisk (*)</p>
       <label>First Name *<input type="text" name="firstname" required></label>
       <label>Last Name *<input type="text" name="lastname" required></label>
       <label>Email Address *<input type="email" name="email" required></label>
       <fieldset>
         <legend>Are you okay with us emailing invoices? *</legend>
-        <label><input type="radio" name="email_invoices" value="yes" required>Yes</label>
+        <label><input type="radio" name="email_invoices" value="yes">Yes</label>
         <label><input type="radio" name="email_invoices" value="no">No</label>
       </fieldset>
       <label>Phone *<input type="tel" name="phone" required></label>
       <fieldset>
         <legend>Can this number receive text messages? *</legend>
-        <label><input type="radio" name="text_message" value="yes" required>Yes</label>
+        <label><input type="radio" name="text_message" value="yes">Yes</label>
         <label><input type="radio" name="text_message" value="no">No</label>
       </fieldset>
 
@@ -109,6 +110,12 @@
         <label>Directions to your boat by land *<textarea name="boat-directions" rows="6" required></textarea></label>
       </div>
 
+      <div id="credit-info" class="conditional">
+        <h3>Credit Card Information</h3>
+        <label>Phone Number to call to change credit card information *<input type="tel" name="credit-change-tel"></label>
+        <p>For your privacy, we will call you to change the card information.</p>
+      </div>
+
       <!-- Common Fields -->
       <label>What would you like our doctors to repair? *<textarea name="repairsneeded" rows="6" required></textarea></label>
       
@@ -120,6 +127,24 @@
           <label><input type="radio" name="ready_to_winterize" value="yes">Yes</label>
           <label><input type="radio" name="ready_to_winterize" value="no">No</label>
           <label><input type="radio" name="ready_to_winterize" value="winterized">Already Winterized</label>
+        </fieldset>
+      </div>
+
+      <!--Winterization Information-->
+      <div id="winterize-info" class="conditional">
+        <h3>Winterize Information</h3>
+        <label>Winterize my boat after this date: *<input type="date" name="winterize-after" required></label>
+        <fieldset>
+          <legend>Would you like us to leave your battery on? (recommended) *</legend>
+          <label><input type="radio" name="battery-on">Yes</label>
+          <label><input type="radio" name="battery-on">No</label>
+        </fieldset>
+        <fieldset>
+          <legend>Additional Systems to Winterize</legend>
+          <label><input type="radio" name="additional-winterize">Water System</label>
+          <label><input type="radio" name="additional-winterize">Head System</label>
+          <label><input type="radio" name="additional-winterize">Air Conditioner</label>
+          <label><input type="radio" name="additional-winterize">Generator</label>
         </fieldset>
       </div>
 
@@ -217,7 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Form Conditional Logic ---
   const form = document.querySelector('form[name="service-agreement"]');
-  const billingAddress = document.getElementById('billing-address');
+  const billingAddressBlock = document.getElementById('billing-address');
   const lakeAddress = document.getElementById('lake-address');
   const establishedChanges = document.getElementById('established-changes');
   const winterizeBlock = document.getElementById('winterize-question');
@@ -225,6 +250,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const currentMonth = new Date().getMonth();
   const isWinterizeSeason = currentMonth >= 8 && currentMonth <= 11; // Sept–Dec
   const boatInfoBlock = document.getElementById('boat-info');
+  const creditBlock = document.getElementById('credit-info');
+  const winterizeInfoBlock = document.getElementById('winterize-info');
 
   // Initial seasonal check
   if (isWinterizeSeason) showElement(winterizeBlock);
@@ -237,12 +264,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- New customer logic ---
     if (target.name === 'new_customer') {
       if (target.value === 'yes') {
-        showElement(billingAddress);
+        showElement(billingAddressBlock);
         hideElement(establishedChanges);
         showElement(boatInfoBlock);
       }
       else {
-        hideElement(billingAddress);
+        hideElement(billingAddressBlock);
         showElement(establishedChanges);
         hideElement(boatInfoBlock);
         hideElement(lakeAddress); // nested reset
@@ -256,8 +283,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //Established Customer Changes logic (billing)
     else if (target.name === 'billing-changes') {
-      if (target.checked) showElement(billingAddress);
-      else hideElement(billingAddress);
+      if (target.checked) showElement(billingAddressBlock);
+      else hideElement(billingAddressBlock);
     }
 
     //Established Customer Changes logic (boat info)
@@ -266,6 +293,17 @@ document.addEventListener('DOMContentLoaded', () => {
       else hideElement(boatInfoBlock);
     }
 
+    //Established Customer Changes logic (credit card)
+    else if (target.name === 'card-changes') {
+      if(target.checked) showElement(creditBlock);
+      else hideElement(creditBlock);
+    }
+
+    //Winterization Info logic
+    else if (target.name === 'ready_to_winterize') {
+      if(target.value === 'yes') showElement(winterizeInfoBlock);
+      else hideElement(winterizeInfoBlock);
+    }
 
     });//addEventListener change e
   });//DCOM content loaded
