@@ -168,7 +168,6 @@ nav
 .mainbody
 {
     background-color: rgba(82, 81, 81, 0.9);
-    //margin-top: 5em;
     .container
     {
         margin-top: 2em;
@@ -287,7 +286,7 @@ nav
     {
         font-family: 'Open Sans', system-ui, sans-serif;
         color: whitesmoke;
-        max-width: 600px;
+        max-width: 70vw;
         margin: auto;
         margin-bottom: 2em;
         display: block;
@@ -299,7 +298,6 @@ nav
         fieldset 
         {
             display: flex;
-            align-items: center;
             gap: 2em;
             border: none;
             margin: 0;
@@ -324,7 +322,6 @@ nav
         }
         label 
         {
-            display: block;
             margin-bottom: 1em;
             input 
             {
@@ -362,26 +359,40 @@ nav
             border: none;
             cursor: pointer;
         }
+        button:hover, button:active
+        {
+            background-color: whitesmoke;
+            color: black;
+        }
         .conditional 
         {
             display: none;
         }
+        div 
+        {
+            #checkbox
+            {
+                display: block;
+            }
+            fieldset
+            {
+                legend
+                {
+                    margin-top: .5em;
+                }
+            }
+            label
+            {
+                input 
+                {
+                    text-transform: uppercase;
+                    font-family: 'Open Sans', system-ui, sans-serif;
+                }
+            }
+            
+        }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .footer
 {

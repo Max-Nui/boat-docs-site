@@ -53,13 +53,13 @@
       <label>Email Address *<input type="email" name="email" required></label>
       <fieldset>
         <legend>Are you okay with us emailing invoices? *</legend>
-        <label><input type="radio" name="email_invoices" value="yes">Yes</label>
+        <label><input type="radio" name="email_invoices" value="yes" required>Yes</label>
         <label><input type="radio" name="email_invoices" value="no">No</label>
       </fieldset>
       <label>Phone *<input type="tel" name="phone" required></label>
       <fieldset>
         <legend>Can this number receive text messages? *</legend>
-        <label><input type="radio" name="text_message" value="yes">Yes</label>
+        <label><input type="radio" name="text_message" value="yes" required>Yes</label>
         <label><input type="radio" name="text_message" value="no">No</label>
       </fieldset>
 
@@ -81,10 +81,10 @@
       <!-- Billing Address Fields (Hidden by Default) -->
       <div id="billing-address" class="conditional">
         <h3>Billing Address</h3>
-        <label>Billing Address *<input type="text" name="billing_address"></label>
-        <label>City *<input type="text" name="city"></label>
-        <label>State *<input type="text" name="state"></label>
-        <label>ZIP Code *<input type="text" name="zip"></label>
+        <label>Billing Address *<input type="text" name="billing_address" required></label>
+        <label>City *<input type="text" name="city" required></label>
+        <label>State *<input type="text" name="state" required></label>
+        <label>ZIP Code *<input type="text" name="zip" required></label>
         <fieldset>
           <legend>Is your billing address the same as your lake address? *</legend>
           <label><input type="radio" name="billing-same-lake" value="yes" required>Yes</label>
@@ -93,26 +93,26 @@
         <!--Nested Lake Address condition-->
         <div id="lake-address" class="conditional">
           <h3>Lake Address</h3>
-          <label>Lake Address *<input type="text" name="lake_address"></label>
-          <label>City *<input type="text" name="lake_city"></label>
-          <label>State *<input type="text" name="lake_state"></label>
-          <label>ZIP Code *<input type="text" name="lake_zip"></label>
+          <label>Lake Address *<input type="text" name="lake_address" required></label>
+          <label>City *<input type="text" name="lake_city" required></label>
+          <label>State *<input type="text" name="lake_state" required></label>
+          <label>ZIP Code *<input type="text" name="lake_zip" required></label>
         </div>
       </div>
 
       <!--Boat information-->
       <div id="boat-info" class="conditional">
         <h3>Boat Information</h3>
-        <label>Boat Name/Description *<input type="text" name="boat-name"></label>
-        <label>Boat Year/Make/Model *<input type="text" name="boat-model"></label>
-        <label>Condo, Dock, and Slip Number *<input type="text" name="boat-loc"></label>
+        <label>Boat Name/Description *<input type="text" name="boat-name" required></label>
+        <label>Boat Year/Make/Model *<input type="text" name="boat-model" required></label>
+        <label>Condo, Dock, and Slip Number *<input type="text" name="boat-loc" required></label>
         <label>Location of Boat Key, Lift Key, or Combination Locks *<textarea name="boat-key-loc" rows="6" required></textarea></label>
         <label>Directions to your boat by land *<textarea name="boat-directions" rows="6" required></textarea></label>
       </div>
 
       <div id="credit-info" class="conditional">
         <h3>Credit Card Information</h3>
-        <label>Phone Number to call to change credit card information *<input type="tel" name="credit-change-tel"></label>
+        <label>Phone Number to call to change credit card information *<input type="tel" name="credit-change-tel" required></label>
         <p>For your privacy, we will call you to change the card information.</p>
       </div>
 
@@ -123,10 +123,9 @@
       <div id="winterize-question" class="conditional">
         <h3>Winterization</h3>
         <fieldset>
-          <legend>Are you ready to winterize? *</legend>
-          <label><input type="radio" name="ready_to_winterize" value="yes">Yes</label>
+          <legend>Does your boat need to be winterized? *</legend>
+          <label><input type="radio" name="ready_to_winterize" value="yes" required>Yes</label>
           <label><input type="radio" name="ready_to_winterize" value="no">No</label>
-          <label><input type="radio" name="ready_to_winterize" value="winterized">Already Winterized</label>
         </fieldset>
       </div>
 
@@ -135,16 +134,16 @@
         <h3>Winterize Information</h3>
         <label>Winterize my boat after this date: *<input type="date" name="winterize-after" required></label>
         <fieldset>
-          <legend>Would you like us to leave your battery on? (recommended) *</legend>
-          <label><input type="radio" name="battery-on">Yes</label>
+          <legend id="battery">Would you like us to leave your battery on? (recommended) *</legend>
+          <label><input type="radio" name="battery-on" required>Yes</label>
           <label><input type="radio" name="battery-on">No</label>
         </fieldset>
-        <fieldset>
-          <legend>Additional Systems to Winterize</legend>
-          <label><input type="radio" name="additional-winterize">Water System</label>
-          <label><input type="radio" name="additional-winterize">Head System</label>
-          <label><input type="radio" name="additional-winterize">Air Conditioner</label>
-          <label><input type="radio" name="additional-winterize">Generator</label>
+        <fieldset id="checkbox">
+        <legend>Additional Systems to Winterize:</legend>
+          <label><input type="checkbox" name="additional-winterize" value="water system" required>Water System</label>
+          <label><input type="checkbox" name="additional-winterize" value="head system">Head System</label>
+          <label><input type="checkbox" name="additional-winterize" value="air conditioner">Air Conditioner</label>
+          <label><input type="checkbox" name="additional-winterize" value="generator">Generator</label>
         </fieldset>
       </div>
 
@@ -153,7 +152,7 @@
       <label>Electronic Signature *<input type="text" name="signature" required></label>
       <p>By signing this agreement, I hereby authorize the above work to be done along with the necessary materials and hereby grant you and/or you employees permission to operate the vessel herein described on the waterways or elsewhere for the purpose of testing and/or inspection. I also accept financial responsibility and am willing to pay all The Boat Docs, Inc. invoices in accordance with the terms described therein. I agree to pay in full when the work is completed. I also understand that this is the policy of The Boat Docs, Inc. to charge my credit card if I am unavailable to pay by cash or check and payment is not made within 10 days. An express mechanic's lien is acknowledged on the above vessel to secure the amount of the repairs thereto. I understand that a service charge of one and a half percent per month (prorated from the due date) will be added to any delinquent accounts. Storage will begin on any trailer or boat not picked up within 10 days after notification of completion of service. If it is necessary that collection be made by suit or otherwise. I agree to pay interest until paid, along with collection costs, including a reasonable attorney fee. The Boat Docs, Inc. is NOT responsible for loss or damage to boats, motor vehicles, trailers or articles left therein in case of fire, theft, accident, freezing or any other causes beyond our control when in our custody for repair or storage. The Boat Docs, Inc. is NOT responsible for data sent by unsecured email. Please be advised and we only recommend protecting secure data such as your credit card number. For your protection, repair work will NOT begin until this signed agreement is received in our office. Our website includes a printable pdf of this contract for patients that prefer to mail this agreement. Our address is The Boat Docs PO Box 3652 Camdenton MO 65020-3652</p>
       <fieldset>
-        <label>I understand that checking this box constitutes a legal signature confirming that I acknowledge and agree to the above Terms of Acceptance. *<input type="checkbox" name="agreement"></label>
+        <label>I understand that checking this box constitutes a legal signature confirming that I acknowledge and agree to the above Terms of Acceptance. *<input type="checkbox" name="agreement" required></label>
       </fieldset>
       <button type="submit">Submit</button>
     </form>

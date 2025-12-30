@@ -230,7 +230,7 @@ nav ul li a:hover, nav ul li a:active {
 .serviceagreementform form {
   font-family: "Open Sans", system-ui, sans-serif;
   color: whitesmoke;
-  max-width: 600px;
+  max-width: 70vw;
   margin: auto;
   margin-bottom: 2em;
   display: block;
@@ -240,7 +240,6 @@ nav ul li a:hover, nav ul li a:active {
 }
 .serviceagreementform form fieldset {
   display: flex;
-  align-items: center;
   gap: 2em;
   border: none;
   margin: 0;
@@ -259,7 +258,6 @@ nav ul li a:hover, nav ul li a:active {
   height: 20px;
 }
 .serviceagreementform form label {
-  display: block;
   margin-bottom: 1em;
 }
 .serviceagreementform form label input {
@@ -291,8 +289,22 @@ nav ul li a:hover, nav ul li a:active {
   border: none;
   cursor: pointer;
 }
+.serviceagreementform form button:hover, .serviceagreementform form button:active {
+  background-color: whitesmoke;
+  color: black;
+}
 .serviceagreementform form .conditional {
   display: none;
+}
+.serviceagreementform form div #checkbox {
+  display: block;
+}
+.serviceagreementform form div fieldset legend {
+  margin-top: 0.5em;
+}
+.serviceagreementform form div label input {
+  text-transform: uppercase;
+  font-family: "Open Sans", system-ui, sans-serif;
 }
 
 .footer {
