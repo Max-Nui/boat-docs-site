@@ -208,9 +208,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const showElement = (el) => {
     if (!el) return;
     el.style.display = 'block';
-    // Skip auto-required logic if flagged
-    if (el.hasAttribute('data-no-required')) return;
-    el.querySelectorAll('input, textarea, select').forEach(input => input.required = true);
+    el.querySelectorAll('input, textarea, select').forEach(input => {
+    // Skip inputs inside a data-no-required container
+    if (input.closest('[data-no-required]')) return;
+    input.required = true;
+    });
   };
 
   const hideElement = (el) => {
