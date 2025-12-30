@@ -69,9 +69,17 @@
         <label><input type="radio" name="new_customer" value="no">No</label>
       </fieldset>
 
+      <!--Return Customer Questions-->
+      <fieldset id="established-changes" class="conditional">
+        <legend>Are there any changes to the following?</legend>
+        <label><input type="checkbox" name="billing-changes" value="true">Billing Address</label>
+        <label><input type="checkbox" name="boat-changes" value="true">Boat Information</label>
+        <label><input type="checkbox" name="card-changes" value="true">Credit card on file</label>
+      </fieldset>
+
       <!-- Billing Address Fields (Hidden by Default) -->
       <div id="billing-address" class="conditional">
-        <h3>New Patient Setup</h3>
+        <h3>Billing Address</h3>
         <label>Billing Address *<input type="text" name="billing_address"></label>
         <label>City *<input type="text" name="city"></label>
         <label>State *<input type="text" name="state"></label>
@@ -83,6 +91,7 @@
         </fieldset>
         <!--Nested Lake Address condition-->
         <div id="lake-address" class="conditional">
+          <h3>Lake Address</h3>
           <label>Lake Address *<input type="text" name="lake_address"></label>
           <label>City *<input type="text" name="lake_city"></label>
           <label>State *<input type="text" name="lake_state"></label>
@@ -90,16 +99,9 @@
         </div>
       </div>
 
-      <!--Return Customer Questions-->
-      <fieldset id="established-changes" class="conditional">
-          <legend>Are there any changes to the following?</legend>
-          <label><input type="checkbox" name="billing-changes" value="true">Billing Address</label>
-          <label><input type="checkbox" name="boat-changes" value="true">Boat Information</label>
-          <label><input type="checkbox" name="card-changes" value="true">Credit card on file</label>
-        </fieldset>
-
       <!--Boat information-->
-      <div id="boat-info">
+      <div id="boat-info" class="conditional">
+        <h3>Boat Information</h3>
         <label>Boat Name/Description *<input type="text" name="boat-name"></label>
         <label>Boat Year/Make/Model *<input type="text" name="boat-model"></label>
         <label>Condo, Dock, and Slip Number *<input type="text" name="boat-loc"></label>
@@ -112,6 +114,7 @@
       
       <!-- Seasonal Question -->
       <div id="winterize-question" class="conditional">
+        <h3>Winterization</h3>
         <fieldset>
           <legend>Are you ready to winterize? *</legend>
           <label><input type="radio" name="ready_to_winterize" value="yes">Yes</label>
@@ -221,6 +224,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const winterizeInputs = winterizeBlock ? winterizeBlock.querySelectorAll('input') : [];
   const currentMonth = new Date().getMonth();
   const isWinterizeSeason = currentMonth >= 8 && currentMonth <= 11; // Sept–Dec
+  const boatInfoBlock = document.getElementById('boat-info');
 
   // Initial seasonal check
   if (isWinterizeSeason) showElement(winterizeBlock);
@@ -235,33 +239,36 @@ document.addEventListener('DOMContentLoaded', () => {
       if (target.value === 'yes') {
         showElement(billingAddress);
         hideElement(establishedChanges);
+        showElement(boatInfoBlock);
       }
       else {
         hideElement(billingAddress);
         showElement(establishedChanges);
+        hideElement(boatInfoBlock);
         hideElement(lakeAddress); // nested reset
       }
     }
-
     // --- Nested Lake Address logic ---
-    if (target.name === 'billing-same-lake') {
+    else if (target.name === 'billing-same-lake') {
       if (target.value === 'no') showElement(lakeAddress);
       else hideElement(lakeAddress);
     }
-    });
 
-    //Established Customer Changes logic
-    if (target.name === 'billing-changes') {
+    //Established Customer Changes logic (billing)
+    else if (target.name === 'billing-changes') {
       if (target.checked) showElement(billingAddress);
       else hideElement(billingAddress);
     }
 
+    //Established Customer Changes logic (boat info)
+    else if (target.name === 'boat-changes') {
+      if (target.checked) showElement(boatInfoBlock);
+      else hideElement(boatInfoBlock);
+    }
 
 
-  });
-
-
-
+    });//addEventListener change e
+  });//DCOM content loaded
 </script>
 </body>
 </html>
