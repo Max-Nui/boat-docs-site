@@ -32,19 +32,40 @@
 </section>
 
 <section class="mainbody">
-  <hr>
-  <section class="footer">
-      <ul class="footerList">
-        <li><p>© 2025 The Boat Docs</p></li>
-        <li><p>PO Box 3652 Camdenton, MO 65020</p></li>
-        <li><p>1-573-480-1992</p></li>
-        <li><a href="mailto:kevin@theboatdocs.com">kevin@theboatdocs.com</a></li>
-        <li><img src="images/facebook.png"></li>
-        <li><img src="images/instagram.png"></li>
-      </ul>
-  </section>
+
+  <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+    <!--Required for Netlify-->
+    <input type="hidden" name="contact" value="service-agreement">
+
+    <!--Honeypot-->
+    <p hidden>
+      <label>
+        Don't fill this out if you are a human lol:
+        <input name="bot-field">
+      </label>
+    </p>
+
+    <h3>Contact our doctors with questions using the form below!</h3>
+    <p>Required fields are marked with an asterisk (*)</p>
+    <label>First Name *<input type="text" name="first-name" required></label>
+    <label>Last Name *<input type="text" name="last-name" required></label>
+    <label>Email Address *<input type="email" name="email" required></label>
+    <label>Message for our doctors: *<textarea name="message" rows="6" required></textarea></label>
+    <button type="submit">Submit</button>
+  </form>
 </section>
 
+<section class="footer">
+  <hr>
+    <ul class="footerList">
+      <li><p>© 2025 The Boat Docs</p></li>
+      <li><p>PO Box 3652 Camdenton, MO 65020</p></li>
+      <li><p>1-573-480-1992</p></li>
+      <li><a href="mailto:kevin@theboatdocs.com">kevin@theboatdocs.com</a></li>
+      <li><img src="images/facebook.png"></li>
+      <li><img src="images/instagram.png"></li>
+    </ul>
+</section>
 
 <script>
     const mobileBtn = document.getElementById('burger')

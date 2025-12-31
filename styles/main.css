@@ -12,12 +12,19 @@
   font-style: normal;
   font-display: swap;
 }
+html {
+  height: 100%;
+}
+
 body {
   background-image: url("../images/bg.jpg");
   background-attachment: fixed;
   font-family: "Open Sans", system-ui, sans-serif;
   background-position: center;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
 
 ul {
@@ -133,12 +140,13 @@ nav ul li a:hover, nav ul li a:active {
 .hero h1 {
   text-align: center;
   font-family: "Orbitron", system-ui, sans-serif;
-  font-size: 6vw;
+  font-size: clamp(40px, 6vw, 100px);
   color: yellowgreen;
   text-shadow: 2px 2px 5px black;
 }
 
 .mainbody {
+  flex: 1 0 auto;
   background-color: rgba(82, 81, 81, 0.9);
 }
 .mainbody .container {
@@ -163,6 +171,33 @@ nav ul li a:hover, nav ul li a:active {
   color: whitesmoke;
   text-align: center;
   width: 20em;
+}
+.mainbody h1 {
+  font-family: "Orbitron", system-ui, sans-serif;
+  text-transform: uppercase;
+  font-size: 4em;
+  text-align: center;
+  color: yellowgreen;
+}
+.mainbody p {
+  text-align: center;
+  color: whitesmoke;
+}
+.mainbody a {
+  text-decoration: none;
+  text-align: center;
+}
+.mainbody a p {
+  color: yellowgreen;
+}
+.mainbody a:hover, .mainbody a:active {
+  color: yellowgreen;
+  text-decoration: underline;
+}
+.mainbody h2 {
+  color: whitesmoke;
+  font-family: "Open Sans", system-ui, sans-serif;
+  text-align: center;
 }
 
 .servicesprovided h3 {
@@ -227,7 +262,7 @@ nav ul li a:hover, nav ul li a:active {
   display: block;
 }
 
-.serviceagreementform form {
+form {
   font-family: "Open Sans", system-ui, sans-serif;
   color: whitesmoke;
   max-width: 70vw;
@@ -235,52 +270,54 @@ nav ul li a:hover, nav ul li a:active {
   margin-bottom: 2em;
   display: block;
 }
-.serviceagreementform form h3 {
+form h3 {
   font-style: italic;
 }
-.serviceagreementform form fieldset {
+form fieldset {
   display: flex;
   gap: 2em;
   border: none;
   margin: 0;
 }
-.serviceagreementform form fieldset legend {
+form fieldset legend {
   width: 100%;
   margin-bottom: 0.5em;
 }
-.serviceagreementform form fieldset label {
+form fieldset label {
   display: flex;
   gap: 0.4em;
   cursor: pointer;
 }
-.serviceagreementform form fieldset label input {
+form fieldset label input {
   width: 20px;
   height: 20px;
 }
-.serviceagreementform form label {
+form label {
   margin-bottom: 1em;
 }
-.serviceagreementform form label input {
+form label input {
   width: 100%;
   padding: 0.6em;
   margin-top: 0.25em;
 }
-.serviceagreementform form label textarea {
+form label textarea {
   width: 100%;
   padding: 0.6em;
   margin-top: 0.25em;
 }
-.serviceagreementform form label select {
+form label select {
   width: 100%;
   padding: 0.6em;
   font-family: "Open Sans", system-ui, sans-serif;
 }
-.serviceagreementform form p {
+form p {
   font-size: 0.6em;
+  text-align: left !important;
 }
-.serviceagreementform form button {
+form button {
   display: flex;
   margin: auto;
+  margin-top: 1em;
   padding: 0.3em;
   font-family: "Orbitron", system-ui, sans-serif;
   font-size: 2em;
@@ -289,26 +326,26 @@ nav ul li a:hover, nav ul li a:active {
   border: none;
   cursor: pointer;
 }
-.serviceagreementform form button:hover, .serviceagreementform form button:active {
+form button:hover, form button:active {
   background-color: whitesmoke;
   color: black;
 }
-.serviceagreementform form .conditional {
+form .conditional {
   display: none;
 }
-.serviceagreementform form div #checkbox {
+form div #checkbox {
   display: block;
 }
-.serviceagreementform form div fieldset legend {
+form div fieldset legend {
   margin-top: 0.5em;
 }
-.serviceagreementform form div label input {
+form div label input {
   text-transform: uppercase;
   font-family: "Open Sans", system-ui, sans-serif;
 }
 
 .footer {
-  margin-bottom: 0;
+  background-color: rgba(82, 81, 81, 0.9);
 }
 .footer .footerList {
   display: flex;

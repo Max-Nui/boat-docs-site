@@ -15,6 +15,11 @@
     font-display: swap;
 }
 
+html 
+{
+    height: 100%;
+}
+
 body
 {
     background-image: url("../images/bg.jpg");
@@ -22,6 +27,9 @@ body
     font-family: 'Open Sans', system-ui, sans-serif;
     background-position: center;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
 }
 ul
 {
@@ -159,7 +167,7 @@ nav
     {
         text-align: center;
         font-family: 'Orbitron', system-ui, sans-serif;
-        font-size: 6vw;
+        font-size: clamp(40px, 6vw, 100px);
         color: yellowgreen;
         text-shadow: 2px 2px 5px black;
     }
@@ -167,6 +175,7 @@ nav
 
 .mainbody
 {
+    flex: 1 0 auto;
     background-color: rgba(82, 81, 81, 0.9);
     .container
     {
@@ -194,6 +203,39 @@ nav
                 width: 20em;
             }
         }
+    }
+    h1
+    {
+        font-family: "Orbitron", system-ui, sans-serif;
+        text-transform: uppercase;
+        font-size: 4em;
+        text-align: center;
+        color: yellowgreen
+    }
+    p 
+    {
+        text-align: center;
+        color: whitesmoke;
+    }
+    a 
+    {
+        text-decoration: none;
+        text-align: center;
+        p 
+        {
+            color: yellowgreen;
+        }
+    }
+    a:hover, a:active
+    {
+        color: yellowgreen;
+        text-decoration: underline;
+    }
+    h2 
+    {
+        color: whitesmoke;
+        font-family: "Open Sans", system-ui, sans-serif;
+        text-align: center;
     }
 }
 
@@ -279,124 +321,123 @@ nav
 }
 
 
-.serviceagreementform
-{
-    
-    form 
-    {
-        font-family: 'Open Sans', system-ui, sans-serif;
-        color: whitesmoke;
-        max-width: 70vw;
-        margin: auto;
-        margin-bottom: 2em;
-        display: block;
 
-        h3 
+form 
+{
+    font-family: 'Open Sans', system-ui, sans-serif;
+    color: whitesmoke;
+    max-width: 70vw;
+    margin: auto;
+    margin-bottom: 2em;
+    display: block;
+
+    h3 
+    {
+        font-style: italic;
+    }
+    fieldset 
+    {
+        display: flex;
+        gap: 2em;
+        border: none;
+        margin: 0;
+        legend
         {
-            font-style: italic;
+            width: 100%;
+            margin-bottom: .5em;
         }
-        fieldset 
+        label
         {
             display: flex;
-            gap: 2em;
-            border: none;
-            margin: 0;
-            legend
-            {
-                width: 100%;
-                margin-bottom: .5em;
-            }
-            label
-            {
-                display: flex;
-                gap: .4em;
-                cursor: pointer;
-                input 
-                {
-                    width: 20px;
-                    height: 20px;
-                }
-            }
-            
-
-        }
-        label 
-        {
-            margin-bottom: 1em;
+            gap: .4em;
+            cursor: pointer;
             input 
             {
-                width: 100%;
-                padding: .6em;
-                margin-top: .25em;
+                width: 20px;
+                height: 20px;
             }
-            textarea
+        }
+        
+
+    }
+    label 
+    {
+        margin-bottom: 1em;
+        input 
+        {
+            width: 100%;
+            padding: .6em;
+            margin-top: .25em;
+        }
+        textarea
+        {
+            width: 100%;
+            padding: .6em;
+            margin-top: .25em;
+        }
+        select 
+        {
+            width: 100%;
+            padding: .6em;
+            font-family: 'Open Sans', system-ui, sans-serif;
+        }
+    }
+    p 
+    {
+        font-size: .6em;
+        text-align: left !important;
+    }
+    
+    button 
+    {
+        display: flex;
+        margin: auto;
+        margin-top: 1em;
+        padding: .3em;
+        font-family: 'Orbitron', system-ui, sans-serif;
+        font-size: 2em;
+        background-color: yellowgreen;
+        border-radius: .2em;
+        border: none;
+        cursor: pointer;
+    }
+    button:hover, button:active
+    {
+        background-color: whitesmoke;
+        color: black;
+    }
+    .conditional 
+    {
+        display: none;
+    }
+    div 
+    {
+        #checkbox
+        {
+            display: block;
+        }
+        fieldset
+        {
+            legend
             {
-                width: 100%;
-                padding: .6em;
-                margin-top: .25em;
+                margin-top: .5em;
             }
-            select 
+        }
+        label
+        {
+            input 
             {
-                width: 100%;
-                padding: .6em;
+                text-transform: uppercase;
                 font-family: 'Open Sans', system-ui, sans-serif;
             }
         }
-        p 
-        {
-            font-size: .6em;
-        }
         
-        button 
-        {
-            display: flex;
-            margin: auto;
-            padding: .3em;
-            font-family: 'Orbitron', system-ui, sans-serif;
-            font-size: 2em;
-            background-color: yellowgreen;
-            border-radius: .2em;
-            border: none;
-            cursor: pointer;
-        }
-        button:hover, button:active
-        {
-            background-color: whitesmoke;
-            color: black;
-        }
-        .conditional 
-        {
-            display: none;
-        }
-        div 
-        {
-            #checkbox
-            {
-                display: block;
-            }
-            fieldset
-            {
-                legend
-                {
-                    margin-top: .5em;
-                }
-            }
-            label
-            {
-                input 
-                {
-                    text-transform: uppercase;
-                    font-family: 'Open Sans', system-ui, sans-serif;
-                }
-            }
-            
-        }
     }
 }
 
 .footer
 {
-    margin-bottom: 0;
+    background-color: rgba(82, 81, 81, 0.9);
     .footerList
     {
         display: flex;

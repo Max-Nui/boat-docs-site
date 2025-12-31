@@ -35,7 +35,7 @@
   <div class="serviceagreementform">
     <form name="service-agreement" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="form-submitted.html">
       <!--Required for Netlify-->
-      <input type="hidden" name="form-name" value="service-agreement">
+      <input type="hidden" name="service-agreement" value="service-agreement">
 
       <!--Honeypot-->
       <p hidden>
@@ -48,19 +48,19 @@
       <!-- Common Fields -->
        <h3>Please fill out the form below to set up an appointment with our doctors!</h3>
        <p>Required fields are marked with an asterisk (*)</p>
-      <label>First Name *<input type="text" name="firstname" required></label>
-      <label>Last Name *<input type="text" name="lastname" required></label>
+      <label>First Name *<input type="text" name="first-name" required></label>
+      <label>Last Name *<input type="text" name="last-name" required></label>
       <label>Email Address *<input type="email" name="email" required></label>
       <fieldset>
         <legend>Are you okay with us emailing invoices? *</legend>
-        <label><input type="radio" name="email_invoices" value="yes" required>Yes</label>
-        <label><input type="radio" name="email_invoices" value="no">No</label>
+        <label><input type="radio" name="email-invoices" value="yes" required>Yes</label>
+        <label><input type="radio" name="email-invoices" value="no">No</label>
       </fieldset>
       <label>Phone *<input type="tel" name="phone" required></label>
       <fieldset>
         <legend>Can this number receive text messages? *</legend>
-        <label><input type="radio" name="text_message" value="yes" required>Yes</label>
-        <label><input type="radio" name="text_message" value="no">No</label>
+        <label><input type="radio" name="text-message" value="yes" required>Yes</label>
+        <label><input type="radio" name="text-message" value="no">No</label>
       </fieldset>
 
       <!--New or Returning-->
@@ -157,17 +157,18 @@
       <button type="submit">Submit</button>
     </form>
   </div>
+</section>
+
+<section class="footer">
   <hr>
-  <section class="footer">
-      <ul class="footerList">
-        <li><p>© 2025 The Boat Docs</p></li>
-        <li><p>PO Box 3652 Camdenton, MO 65020</p></li>
-        <li><p>1-573-480-1992</p></li>
-        <li><a href="mailto:kevin@theboatdocs.com">kevin@theboatdocs.com</a></li>
-        <li><img src="images/facebook.png"></li>
-        <li><img src="images/instagram.png"></li>
-      </ul>
-  </section>
+    <ul class="footerList">
+      <li><p>© 2025 The Boat Docs</p></li>
+      <li><p>PO Box 3652 Camdenton, MO 65020</p></li>
+      <li><p>1-573-480-1992</p></li>
+      <li><a href="mailto:kevin@theboatdocs.com">kevin@theboatdocs.com</a></li>
+      <li><img src="images/facebook.png"></li>
+      <li><img src="images/instagram.png"></li>
+    </ul>
 </section>
 
 
