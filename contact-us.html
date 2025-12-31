@@ -76,6 +76,36 @@
       icons = document.querySelectorAll('.service-icon')
       texts = document.querySelectorAll('.service-text')
 
+
+    
+    const formatPhoneNumber = (value) => {
+      const digits = value.replace(/\D/g, '').slice(0, 10);
+      if (digits.length < 4) return digits;
+      if (digits.length < 7) return `(${digits.slice(0, 3)}) ${digits.slice(3)}`;
+      return `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}`;
+    };
+
+    const formatZipCode = (value) => {
+      const digits = value.replace(/\D/g, '').slice(0, 9); // max 9 digits
+      if (digits.length <= 5) return digits;
+      return `${digits.slice(0, 5)}-${digits.slice(5)}`;
+    };
+
+    //tel number input validation
+    document.addEventListener('input', (e) => {
+      if (e.target.matches('input[type="tel"]')) {
+        e.target.value = formatPhoneNumber(e.target.value);
+      }
+    });
+
+    // Single listener for all ZIP fields
+    document.addEventListener('input', (e) => {
+      if (e.target.name === 'zip' || e.target.name === 'lake_zip') {
+        e.target.value = formatZipCode(e.target.value);
+      }
+    });
+
+
     //burger icon logic
     mobileBtn.addEventListener('click', (e) => {
       nav.classList.add('menu-btn');

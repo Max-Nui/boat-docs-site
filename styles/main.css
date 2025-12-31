@@ -340,7 +340,6 @@ form div fieldset legend {
   margin-top: 0.5em;
 }
 form div label input {
-  text-transform: uppercase;
   font-family: "Open Sans", system-ui, sans-serif;
 }
 
