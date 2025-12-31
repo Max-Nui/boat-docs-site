@@ -98,9 +98,12 @@ nav ul li a:hover, nav ul li a:active {
 
 .hero {
   margin-bottom: 2em;
+  text-align: center;
 }
 .hero a {
+  display: inline-block;
   text-decoration: none;
+  width: clamp(250px, 50vw, 900px);
 }
 .hero a .subhero {
   display: block;
@@ -109,7 +112,6 @@ nav ul li a:hover, nav ul li a:active {
   border-radius: 0.75em;
   padding: 1em;
   margin-top: 3em;
-  max-width: 50em;
 }
 .hero a .subhero .calltoaction {
   text-align: center;
