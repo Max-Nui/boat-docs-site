@@ -33,7 +33,7 @@
 
 <section class="mainbody">
 
-  <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+  <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="form-submitted.html">
     <!--Required for Netlify-->
     <input type="hidden" name="contact" value="service-agreement">
 
@@ -50,6 +50,7 @@
     <label>First Name *<input type="text" name="first-name" required></label>
     <label>Last Name *<input type="text" name="last-name" required></label>
     <label>Email Address *<input type="email" name="email" required></label>
+    <label>Phone Num *<input type="tel" name="phone-num" required></label>
     <label>Message for our doctors: *<textarea name="message" rows="6" required></textarea></label>
     <button type="submit">Submit</button>
   </form>
