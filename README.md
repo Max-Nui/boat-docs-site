@@ -1,2 +1,2 @@
-# test-site
+# boat docs site
 Site for testing
